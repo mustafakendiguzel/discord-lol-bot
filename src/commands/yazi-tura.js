@@ -6,7 +6,8 @@ const data = {
 
 /** @param {import('commandkit').SlashCommandProps} param0 */
 function run({ interaction, client }) {
-  const result = Math.random() < 0 ? "yazı" : "tura";
+  const random = Math.floor(Math.random() * 2);
+  const result = random === 0 ? "yazi" : "tura";
 
   interaction.reply(`<:${result}:1259980160824905740>`);
 }
